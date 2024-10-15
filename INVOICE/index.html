@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="invoice-container">
+        <h1>Tax Invoice</h1>
+        <p>L&T Logistics Pvt. Ltd.</p>
+        <p>Tel: 9852364125,7154863214</p>
+        <form id="invoiceForm">
+            <table>
+                <tr>
+                    <th>Field</th>
+                    <th>Details</th>
+                </tr>
+                <tr>
+                    <td><label for="awbNo">AWB No.:</label></td>
+                    <td><input type="text" id="awbNo" name="awbNo"></td>
+                </tr>
+                <tr>
+                    <td><label for="consignee">Consignee:</label></td>
+                    <td><input type="text" id="consignee" name="consignee"></td>
+                </tr>
+                <tr>
+                    <td><label for="destination">Destination:</label></td>
+                    <td><input type="text" id="destination" name="destination"></td>
+                </tr>
+                <tr>
+                    <td><label for="ds">D/S:</label></td>
+                    <td><input type="text" id="ds" name="ds"></td>
+                </tr>
+                <tr>
+                    <td><label for="pcs">Pcs:</label></td>
+                    <td><input type="number" id="pcs" name="pcs"></td>
+                </tr>
+                <tr>
+                    <td><label for="weight">Weight (kg):</label></td>
+                    <td><input type="number" step="0.01" id="weight" name="weight"></td>
+                </tr>
+                <tr>
+                    <td><label for="amount">Amount (₹):</label></td>
+                    <td><input type="number" step="0.01" id="amount" name="amount"></td>
+                </tr>
+                <tr>
+                    <td><label for="covidCharge">COVID Charge (₹):</label></td>
+                    <td><input type="number" step="0.01" id="covidCharge" name="covidCharge"></td>
+                </tr>
+                <tr>
+                    <td><label for="fuelCharge">Fuel Charge (₹):</label></td>
+                    <td><input type="number" step="0.01" id="fuelCharge" name="fuelCharge"></td>
+                </tr>
+                <tr>
+                    <td><label for="grandTotal">Grand Total (₹):</label></td>
+                    <td><input type="number" step="0.01" id="grandTotal" name="grandTotal" readonly></td>
+                </tr>
+            </table>
+            <button type="button" onclick="calculateTotal()">Calculate Total</button>
+        </form>
+
+        <h3> Terms and Conditions</h3>
+        <p>
+           1. Payment of this invoice should be made by crossed account payee cheque, demand draft, or online transfer in favor ofL & T Logistics.
+           <br>
+           2.Payment should be made within 4 days  from the date of the invoice.
+           <br>
+           3.Interest at 3% per month will be charged on delayed payments beyond the due date.
+           <br>
+           4.Any discrepancies or disputes related to this invoice must be communicated in writing within 7 days from the invoice date, after which it will be deemed correct and payable.
+           <br>
+           5.he ownership of goods is transferred to the buyer once the full payment is received. However, the risk of loss or damage to goods passes to the buyer once the goods leave the seller’s premises.
+           <br>
+           6.Returns are accepted within 3 days of delivery, subject to the condition of the goods. A restocking fee of 2% may apply.
+           <br>
+           7.Returns are accepted within [number] days of delivery, subject to the condition of the goods. A restocking fee of [percentage]% may apply.
+        </p>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
